@@ -1,6 +1,6 @@
 # Aplicación Web de Registro de Gastos e Ingresos
 
-Esta es una aplicación web de página única (SPA) desarrollada con Angular para gestionar el registro de gastos e ingresos de una casa.
+Esta es una aplicación web de página única (SPA) desarrollada con Angular para gestionar el registro de gastos e ingresos de una casa. Puedes agregar y listar tus gastos e ingresos, así como gestionar categorías asociadas a tus transacciones.
 
 ## Requisitos Previos
 
@@ -12,77 +12,41 @@ Asegúrate de tener instalado Node.js y Angular CLI en tu sistema. Si no los tie
    ```
    npm install -g @angular/cli
    ```
+   
+## Cómo Clonar y Usar el Proyecto
 
-## Pasos para Crear y Ejecutar el Proyecto
-
-1. **Clona el Repositorio:**
-
-   Clona este repositorio en tu máquina local:
+1. Clona este repositorio en tu máquina local:
 
    ```
    git clone https://github.com/meli-morenooo/Web-SPA-con-Angular.git
-   cd TU_REPOSITORIO
    ```
 
-2. **Instala las Dependencias:**
+2. Navega al directorio del proyecto:
 
-   Instala las dependencias del proyecto ejecutando el siguiente comando:
+   ```
+   cd GastosIngresosApp
+   ```
+
+3. Instala las dependencias del proyecto:
 
    ```
    npm install
    ```
 
-3. **Crea los Componentes:**
-
-   Crea los componentes necesarios para la aplicación:
+4. Inicia el servidor de desarrollo:
 
    ```
-   ng generate component CargarGastos
-   ng generate component CargarIngresos
-   ng generate component CargarCategorias
-   ng generate component ListadoGastosIngresos
+   ng serve
    ```
 
-4. **Define los Modelos:**
+5. Abre tu navegador y visita [http://localhost:4200/](http://localhost:4200/) para ver la aplicación en funcionamiento.
 
-   Define los modelos para Gasto, Ingreso y Categoría en `src/app/shared/models.ts`.
+## Funcionalidades Implementadas
 
-5. **Crea los Servicios:**
+- **Agregar Gastos e Ingresos:** Puedes agregar nuevos gastos e ingresos, especificando detalles como nombre, monto y categoría.
 
-   Crea los servicios para manejar gastos, ingresos, categorías y balance:
+- **Listado de Gastos e Ingresos:** Puedes ver una lista de tus gastos e ingresos registrados, incluyendo detalles como nombre y monto.
 
-   ```
-   ng generate service GastosIngresos
-   ng generate service Categorias
-   ng generate service Balance
-   ```
+- **Gestión de Categorías:** Puedes gestionar las categorías asociadas a tus transacciones, agregando nuevas categorías y asignando categorías a tus gastos e ingresos.
 
-6. **Implementa Componentes y Servicios:**
-
-   Implementa la lógica en cada componente y servicio siguiendo las directivas de Angular.
-
-7. **Configura el Enrutamiento:**
-
-   Configura el enrutamiento de la aplicación en `src/app/app-routing.module.ts`.
-
-8. **Diseña la Interfaz de Usuario:**
-
-   Diseña la interfaz de usuario utilizando componentes de Angular Material u otras librerías de diseño.
-
-9. **Almacenamiento en LocalStorage:**
-
-   Implementa métodos en el servicio de Balance para guardar y recuperar el balance mensual en el LocalStorage.
-
-10. **Muestra el Balance:**
-
-    En el componente de Balance, muestra el balance total de ingresos, egresos y el balance resultante.
-
-11. **Ejecuta la Aplicación:**
-
-    Ejecuta la aplicación con el siguiente comando:
-
-    ```
-    ng serve
-    ```
-
-    La aplicación estará disponible en `http://localhost:4200/`.
+- **Almacenamiento Local:** Los datos de gastos, ingresos y categorías se almacenan localmente utilizando LocalStorage para que los cambios persistan entre sesiones.
