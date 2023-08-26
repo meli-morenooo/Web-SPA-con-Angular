@@ -1,27 +1,88 @@
-# GastosIngresosApp
+# Aplicación Web de Registro de Gastos e Ingresos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+Esta es una aplicación web de página única (SPA) desarrollada con Angular para gestionar el registro de gastos e ingresos de una casa.
 
-## Development server
+## Requisitos Previos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Asegúrate de tener instalado Node.js y Angular CLI en tu sistema. Si no los tienes instalados, sigue los siguientes pasos:
 
-## Code scaffolding
+1. Instala Node.js desde [nodejs.org](https://nodejs.org/).
+2. Instala Angular CLI usando el siguiente comando en tu terminal:
+   
+   ```
+   npm install -g @angular/cli
+   ```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Pasos para Crear y Ejecutar el Proyecto
 
-## Build
+1. **Clona el Repositorio:**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+   Clona este repositorio en tu máquina local:
 
-## Running unit tests
+   ```
+   git clone https://github.com/meli-morenooo/Web-SPA-con-Angular.git
+   cd TU_REPOSITORIO
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. **Instala las Dependencias:**
 
-## Running end-to-end tests
+   Instala las dependencias del proyecto ejecutando el siguiente comando:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ```
+   npm install
+   ```
 
-## Further help
+3. **Crea los Componentes:**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   Crea los componentes necesarios para la aplicación:
+
+   ```
+   ng generate component CargarGastos
+   ng generate component CargarIngresos
+   ng generate component CargarCategorias
+   ng generate component ListadoGastosIngresos
+   ```
+
+4. **Define los Modelos:**
+
+   Define los modelos para Gasto, Ingreso y Categoría en `src/app/shared/models.ts`.
+
+5. **Crea los Servicios:**
+
+   Crea los servicios para manejar gastos, ingresos, categorías y balance:
+
+   ```
+   ng generate service GastosIngresos
+   ng generate service Categorias
+   ng generate service Balance
+   ```
+
+6. **Implementa Componentes y Servicios:**
+
+   Implementa la lógica en cada componente y servicio siguiendo las directivas de Angular.
+
+7. **Configura el Enrutamiento:**
+
+   Configura el enrutamiento de la aplicación en `src/app/app-routing.module.ts`.
+
+8. **Diseña la Interfaz de Usuario:**
+
+   Diseña la interfaz de usuario utilizando componentes de Angular Material u otras librerías de diseño.
+
+9. **Almacenamiento en LocalStorage:**
+
+   Implementa métodos en el servicio de Balance para guardar y recuperar el balance mensual en el LocalStorage.
+
+10. **Muestra el Balance:**
+
+    En el componente de Balance, muestra el balance total de ingresos, egresos y el balance resultante.
+
+11. **Ejecuta la Aplicación:**
+
+    Ejecuta la aplicación con el siguiente comando:
+
+    ```
+    ng serve
+    ```
+
+    La aplicación estará disponible en `http://localhost:4200/`.
