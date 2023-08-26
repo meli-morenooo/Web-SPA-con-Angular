@@ -5,11 +5,11 @@
   <mat-card-content>
     <h3>Listado de Gastos</h3>
     <ul>
-      <li *ngFor="let gasto of gastos">{{ gasto.name }} - {{ gasto.Price }}</li>
+      <li *ngFor="let gasto of gastos">{{ gasto.name }} - {{gasto.detail}} - {{gasto.category}} -  {{ gasto.Price | currency }} - {{ gasto.date | date}}</li>
     </ul>
     <h3>Listado de Ingresos</h3>
     <ul>
-      <li *ngFor="let ingreso of ingresos">{{ ingreso.name }} - {{ ingreso.Price }}</li>
+      <li *ngFor="let ingreso of ingresos">{{ ingreso.name }} - {{ingreso.detail}} - {{ingreso.category}} - {{ ingreso.Price | currency }} - {{ ingreso.date | date}}</li>
     </ul>
   </mat-card-content>
 </mat-card>
