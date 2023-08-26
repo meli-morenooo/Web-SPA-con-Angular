@@ -1,4 +1,3 @@
-// listado-gastos-ingresos.component.ts
 import { Component, OnInit } from '@angular/core';
 import { GastosIngresosService } from '../services/gastos-ingresos.service';
 import { Gasto, Ingreso } from '../models/models';

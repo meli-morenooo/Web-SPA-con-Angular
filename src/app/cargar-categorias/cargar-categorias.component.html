@@ -1,12 +1,16 @@
 <mat-card>
-    <mat-card-title>Cargar Categoría</mat-card-title>
-    <mat-card-content>
+  <mat-card-header>
+    <mat-card-title>Agregar Categoría</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form>
       <mat-form-field>
-        <input matInput placeholder="Nombre" [(ngModel)]="nuevaCategoria.name">
+        <input matInput placeholder="Nombre" [(ngModel)]="nuevaCategoria.name" name="name">
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Detalle" [(ngModel)]="nuevaCategoria.detail">
+        <input matInput placeholder="Detalle" [(ngModel)]="nuevaCategoria.detail" name="detail">
       </mat-form-field>
-      <button mat-raised-button color="primary" (click)="guardarCategoria()">Guardar Categoría</button>
-    </mat-card-content>
+      <button mat-raised-button color="primary" (click)="agregarCategoria()">Agregar Categoría</button>
+    </form>
+  </mat-card-content>
 </mat-card>

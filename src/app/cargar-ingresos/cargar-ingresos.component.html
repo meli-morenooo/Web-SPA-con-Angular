@@ -1,24 +1,30 @@
 <mat-card>
-    <mat-card-title>Cargar Ingreso</mat-card-title>
-    <mat-card-content>
+  <mat-card-header>
+    <mat-card-title>Cargar Ingresos</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form (ngSubmit)="agregarIngreso()">
       <mat-form-field>
-        <input matInput placeholder="Nombre">
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="nuevoIngreso.name" name="name" required>
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Detalle">
+        <mat-label>Detalle</mat-label>
+        <input matInput [(ngModel)]="nuevoIngreso.detail" name="detail">
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Precio" type="number">
+        <mat-label>Monto</mat-label>
+        <input matInput type="number" [(ngModel)]="nuevoIngreso.Price" name="Price" required>
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Categoría">
+        <mat-label>Categoría</mat-label>
+        <mat-select [(ngModel)]="nuevoIngreso.category" name="category" required multiple>
+          <mat-option *ngFor="let categoria of categorias" [value]="categoria.name">
+            {{ categoria.name }}
+          </mat-option>
+        </mat-select>
       </mat-form-field>
-      <mat-form-field>
-        <input matInput [matDatepicker]="picker" placeholder="Fecha">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-      <button mat-raised-button color="primary">Guardar Ingreso</button>
-    </mat-card-content>
+      <button mat-raised-button color="primary" type="submit">Agregar Ingreso</button>
+    </form>
+  </mat-card-content>
 </mat-card>
-  

@@ -16,6 +16,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -38,6 +39,7 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatTabsModule,
     MatToolbarModule,
+    MatSelectModule,
     FormsModule
   ],
   providers: [],
